@@ -1,6 +1,7 @@
 
 name: Build HelloYaml
 
+# yamllint disable-line rule:truthy
 on: [push]
 
 jobs:
