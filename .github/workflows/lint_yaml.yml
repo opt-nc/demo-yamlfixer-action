@@ -1,0 +1,20 @@
+name: Lint yaml files
+
+on: [push]
+
+jobs:
+  lint:
+    name: Lint & Fix yaml files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout consumer-sirh
+        uses: actions/checkout@v3.0.0
+        with:
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+      - name: Check yaml files
+        uses: opt-nc/yamlfixer-action@fix/auth
+        with:
+          yaml_file: .github/workflows/build_hello.yml
+          options: --verbose
+          user: ${{ github.actor }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
