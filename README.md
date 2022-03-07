@@ -1,2 +1,3 @@
 # demo-yamlfixer-action
-Template de demo pour la github adtion yamlfixer-action
+
+Projet de demo pour la github adtion yamlfixer-action
